@@ -1,0 +1,2 @@
+rootProject.name='BindAnimationProto'
+include ':app'
