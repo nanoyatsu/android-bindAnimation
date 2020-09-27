@@ -11,7 +11,7 @@ fun bindBackgroundColorGradually(view: View, oldColor: Int, newColor: Int) {
     if (oldColor == newColor) return
     val background = view.background
     if (background is ColorDrawable) {
-        ValueAnimator.ofArgb(oldColor, newColor).apply {
+        ValueAnimator.ofArgb(background.color, newColor).apply {
             duration = 500
             addUpdateListener { view.setBackgroundColor(it.animatedValue as Int) }
             start()
