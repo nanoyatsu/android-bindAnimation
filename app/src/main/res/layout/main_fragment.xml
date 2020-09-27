@@ -44,26 +44,27 @@
                     tools:text="100" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button_plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="@{() -> vm.qtyPlus()}"
-                    android:text="plus"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/button_minus"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/message" />
-
-                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button_minus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="@{() -> vm.qtyMinus()}"
                     android:text="minus"
                     app:layout_constraintBottom_toBottomOf="@id/button_plus"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/button_plus"
+                    app:layout_constraintEnd_toStartOf="@id/button_plus"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/button_plus" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> vm.qtyPlus()}"
+                    android:text="plus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/button_minus"
+                    app:layout_constraintTop_toBottomOf="@id/message" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
